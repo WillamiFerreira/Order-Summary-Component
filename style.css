@@ -15,6 +15,9 @@
     box-sizing: border-box;
     cursor: default;
 }
+a{
+    text-decoration: none;
+}
 
 img{
     display: block;
@@ -89,7 +92,14 @@ h3{
     color: var(--Desaturated-blue);
 }
 .change{
+    font-size: 0.9em;
     grid-column-start: 4;
+    font-weight: 700;
+    text-decoration: underline;
+
+}
+.change:hover{
+    text-decoration: none;
 }
 
 .payment{
@@ -105,8 +115,17 @@ h3{
     color: var(--Pale-blue);
     box-shadow: 0px 5px 40px #7280a7c9;
 }
+.payment:hover{
+    background-color: var(--Desaturated-blue);
+}
+
 .cancel{
     font-weight: 700;
     color: var(--Desaturated-blue);
 }
+.cancel:hover{
+    color: var(--Dark-blue);
+}
+
+
 
