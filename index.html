@@ -1,188 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
-:root{
-    --Pale-blue: hsl(225, 100%, 94%);
-    --Bright-blue: hsl(245, 75%, 52%);
-
-    --Very-pale-blue: hsl(225, 100%, 98%);
-    --Desaturated-blue: hsl(224, 23%, 55%);
-    --Dark-blue: hsl(223, 47%, 23%); 
-    
-    --Main-font:'Red Hat Display', sans-serif;
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.img-area, img{
-    display: block;
-    width: 100%;
-}
-
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #e0e8ff;
-    background-size: contain;
-    font-family: 'Red Hat Display', sans-serif;
-    background-image: url(images/pattern-background-mobile.svg);
-    background-repeat:repeat-x;
-}
-.icon-music{
-    max-width: 2.625em;
-    margin: 0 auto;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    max-width: 327px;
-    min-height: 567px;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px var(--Pale-blue);
-    margin: 50px 25px;
-
-}
-
-.img-area img{
-    border-radius: 20px 20px 0 0;
-}
-
-.price-area{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1.5fr;
-    flex-direction: row;
-    align-items: center;
-    background-color: var(--Very-pale-blue);
-    max-width: 17.5em;
-    height: 5em;
-    border-radius: 10px;
-    padding: 0.5em 0;
-}
-.plan{
-    font-size: 0.9em;
-    font-weight: 700;
-    color: var(--Dark-blue);
-}
-.price{
-    font-size: 0.91em;
-    color: var(--Desaturated-blue);
-}
-.charge{
-    font-size: 0.8em;
-    font-weight: 700;
-    text-decoration: underline;
-    color: var(--Bright-blue);
-}
-
-.text-area{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-grow: 1;
-    text-align: center;
-    padding: 2em 2em;
-}
-h4{
-    font-size: 1.375em;
-    color: var(--Dark-blue);
-    font-weight:900;
-
-}
-
-.pharagraph{
-    line-height: 1.5em;
-    max-width: 16.5em;
-    margin: 0 auto;
-    color: var(--Desaturated-blue)
-}
-
-.botom01{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--Bright-blue);
-    max-width: 17.5em;
-    height: 3.125em;
-    border-radius: 10px;
-    color: var(--Very-pale-blue);
-    font-weight:700;
-}
-
-.botom01:hover{
-    background-color: var(--Desaturated-blue);
-}
-.cancel{
-    margin-bottom: 1em;
-    font-weight: 700;
-    margin: 0 auto;
-    color: var(--Desaturated-blue);
-}
-.cancel:hover{
-    color: var(--Dark-blue);
-}
-
-@media screen and (min-width:600px) {
-    body{
-        background-image: url(images/pattern-background-desktop.svg);
-    }
-    main{
-        display: flex;
-        flex-direction: column;
-        max-width: 400px;
-        height: 450px;
-        max-height: 600px;
-        background-color: white;
-        border-radius: 20px;
-        margin: 0px;
-    
-    }
-
-    .text-area{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        flex-grow: 1;
-        text-align: center;
-        padding: 1em;
-    }
-    .price-area{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1.5fr;
-        flex-direction: row;
-        align-items: center;
-        background-color: var(--Very-pale-blue);
-        width: 300px;
-        max-width: 354px;
-        border-radius: 10px;
-        padding: 0.5em 0;
-        margin: 0 auto;
-    }
-
-    .botom01{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--Bright-blue);
-        width: 300px;
-        max-width: 500px;
-        height: 50px;
-        border-radius: 10px;
-        color: var(--Very-pale-blue);
-        font-weight:700;
-        margin: 0 auto;
-    }
-
-    h4{
-        font-size: 1.5em;
-        color: var(--Dark-blue);
-        font-weight:900;
-    
-    }
-
-    
-}
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="style/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Order Summary Component</title>
+</head>
+<body>
+    <main>
+        <div class="img_hero">
+            <img src="style/images/illustration-hero.svg" alt="illustration hero">
+        </div>
+        <div class="text_area">
+            <h3>Order Summary</h3>
+            <p class="paragraph">You can listen to millions of songs,
+               audiobooks, and podcasts on any device
+               anywhere you like!
+            </p>
+            <div class="plan_area">
+                <img src="style/images/icon-music.svg
+                " alt="icon music">
+                <div class="plan">
+                    <p class="plan_type">Annual Plan</p>
+                    <p class="plan_price">$59.99/year</p>
+                </div>
+                <a class="change" href="#">Change</a>
+            </div>
+            <div class="payment">
+                <p>Proceed to Payment</p>
+            </div>
+            <p class="cancel">Cancel Order</p>
+        </div>
+        </div>
+    </main>
+</body>
+</html>
