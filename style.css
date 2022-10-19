@@ -121,6 +121,9 @@ h3{
     background-color: var(--Desaturated-blue);
     cursor:pointer;
 }
+.payment p:hover{
+    cursor:pointer;
+}
 
 .cancel{
     font-weight: 700;
